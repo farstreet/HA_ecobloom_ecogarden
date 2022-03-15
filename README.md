@@ -14,7 +14,7 @@ The following features have been implemented:
     - Feed the fish at 9am (unless already fed manually earlier)
     - Reset the 'fish already fed check'
 
-  - Services:
+  - Scripts:
     -
     - Manually feed the fish (and turn on the 'fish already fed check')
 
