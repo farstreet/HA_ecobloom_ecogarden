@@ -1,0 +1,7 @@
+  ecogarden_feedfish: curl http://LOCAL_IP_OF_YOUR_ECOGARDEN/hooks/feed_now
+  
+  
+  
+  # stating the obvious: replace LOCAL_IP_OF_YOUR_ECOGARDEN with the local IP of your ecogarden :)
+  
+  
