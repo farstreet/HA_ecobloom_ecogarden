@@ -27,6 +27,10 @@ The following features have been implemented:
     - Fish already fed check (input_boolean.aquarium_fish_fed)
 
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
+    
+  - Lovelace Back-Office:
+    - 
+    - Button Card to feed the fish manually from the Back-office
 
 ----
 ## Disclaimer
