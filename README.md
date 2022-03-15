@@ -24,7 +24,9 @@ The following features have been implemented:
 
   - Helpers:
     - 
-    - Fish already fed check (input_select.aquarium_fish_fed)
+    - Fish already fed check (input_boolean.aquarium_fish_fed)
+
+    Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
 
 ----
 ## Disclaimer
