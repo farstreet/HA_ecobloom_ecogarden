@@ -9,13 +9,13 @@
 
   condition:
   - condition: state
-    entity_id: input_select.aquarium_fish_fed
+    entity_id: input_boolean.aquarium_fish_fed
     state: 'off'
  
   action:
   - service: shell_command.ecogarden_feedfish
-  - service: input_select.turn_on
-    entity_id: input_select.aquarium_fish_fed
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.aquarium_fish_fed
 
 ################################################################################
 - alias: Aquarium Reset Feed Fish Check
@@ -27,5 +27,5 @@
     at: "00:00:00"
     
   action:
-  - service: input_select.turn_off
-    entity_id: input_select.aquarium_fish_fed
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.aquarium_fish_fed
