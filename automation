@@ -1,0 +1,31 @@
+################################################################################
+- alias: Aquarium Feed Fish At 9am
+################################################################################
+  id: 'aquarium_feed_fish_at_9am'
+  
+  trigger:
+  - platform: time
+    at: "09:00:00"
+
+  condition:
+  - condition: state
+    entity_id: input_select.aquarium_fish_fed
+    state: 'off'
+ 
+  action:
+  - service: shell_command.ecogarden_feedfish
+  - service: input_select.turn_on
+    entity_id: input_select.aquarium_fish_fed
+
+################################################################################
+- alias: Aquarium Reset Feed Fish Check
+################################################################################
+  id: 'aquarium_reset_feed_fish_check'
+  
+  trigger:
+  - platform: time
+    at: "00:00:00"
+    
+  action:
+  - service: input_select.turn_off
+    entity_id: input_select.aquarium_fish_fed
