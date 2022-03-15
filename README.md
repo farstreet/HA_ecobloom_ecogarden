@@ -10,13 +10,13 @@ More information on Home Assistant: https://homeassistant.io
 
 The following features have been implemented:
   - Automations:
-    - 
-    - Feed the fish at 9am (unless already fed manually earlier)
-    - Reset the 'fish already fed check'
+    -     
+    - Feed the fish at 9am unless already fed manually earlier (automation.aquarium_feed_fish_at_9am)
+    - Reset the 'fish already fed check' at midnight to allow automatic feeding the next day (automation.aquarium_reset_feed_fish_check)
 
   - Scripts:
     -
-    - Manually feed the fish (and turn on the 'fish already fed check')
+    - Manually feed the fish and turn on the 'fish already fed check' (script.aquarium_feed_fish_manually)
 
   - Shell Commands:
     -
@@ -24,7 +24,7 @@ The following features have been implemented:
 
   - Helpers:
     - 
-    - Fish already fed check (input_boolean.aquarium_fish_fed)
+    - input_boolean.aquarium_fish_fed : Fish already fed check
 
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
     
