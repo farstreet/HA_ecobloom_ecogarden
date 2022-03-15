@@ -1,7 +1,7 @@
 ###############################################################################################################
   aquarium_feed_fish_manually:
 ###############################################################################################################  
-    alias: 'Feed The Fish'
+    alias: 'Fish Feeding'
     sequence:
       - service: shell_command.ecogarden_feedfish
       - service: input_boolean.turn_on
