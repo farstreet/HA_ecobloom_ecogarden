@@ -1,0 +1,11 @@
+###########################################################################################
+# Manually feed the fish from the back-office
+###########################################################################################
+type: button
+tap_action:
+  action: call-service
+  service: shell_command.ecogarden_feedfish
+  service_data: {}
+  target: {}
+icon: mdi:shaker
+name: Feed Fish
