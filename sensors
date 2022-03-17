@@ -13,7 +13,6 @@
 ###############################################################################################################
   - platform: rest
     name: Ecogarden Light Sensor
-    device_class: power_factor
     resource: http://LOCAL_IP_OF_YOUR_ECOGARDEN/hooks/light_sensor
-    value_template: "{{ value_json.value | float | round(2) * 100 | int }}"
+    value_template: "{{ value_json.value | float | round(2) * 100 }}"
     unit_of_measurement: "%"
