@@ -4,7 +4,7 @@
 type: button
 tap_action:
   action: call-service
-  service: shell_command.ecogarden_feedfish
+  service: script.aquarium_feed_fish_manually
   service_data: {}
   target: {}
 icon: mdi:shaker
