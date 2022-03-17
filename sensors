@@ -1,0 +1,19 @@
+###############################################################################################################
+# sensor.ecogarden_temperature
+###############################################################################################################
+  - platform: rest
+    name: Ecogarden Temperature
+    device_class: temperature
+    resource: !secret sensor_ecogarden_water_temperature
+    value_template: "{{ value_json.value | float | round(1) }}"
+    unit_of_measurement: "°C"
+
+###############################################################################################################
+# sensor.ecogarden_light_sensor
+###############################################################################################################
+  - platform: rest
+    name: Ecogarden Light Sensor
+    device_class: power_factor
+    resource: !secret sensor_ecogarden_light_sensor
+    value_template: "{{ value_json.value | float | round(2) * 100 | int }}"
+    unit_of_measurement: "%"
