@@ -6,21 +6,37 @@ More information on the Ecogarden by Ecobloom: https://ecobloom.se/ecogarden/
 
 This Github describes the integration of the Ecobloom Ecogarden into Home Assistant through a local API.
 
+I am using a combination of shell commands (to send commands to the Ecogarden, e.g. feed the fish) and RESTful sensors (to receive current values, e.g.  water temperature).   These are then used in a number of scripts and automations to allow automatic actions and voice commands through Google Home (other voice assistants can be used as well).  Current status of the aquarium and actions can also be triggered manually via the Lovelace back-office.   
+
 More information on Home Assistant: https://homeassistant.io
 
 The following features have been implemented:
+
+  - Shell Commands:
+    -
+    - Feed Fish (shell_command.ecogarden_feedfish)
+
+    More information: https://www.home-assistant.io/integrations/shell_command/
+    
+  - RESTful Sensors:
+    -     
+    - Temperature of the water (sensor.ecogarden_water_temperature)
+    - Ambient light sensor (sensor.ecogarden_light_sensor)
+    
+    More information: https://www.home-assistant.io/integrations/sensor.rest/
+
   - Automations:
     -     
     - Feed the fish at 9am unless already fed manually earlier (automation.aquarium_feed_fish_at_9am)
     - Reset the 'fish already fed check' at midnight to allow automatic feeding the next day (automation.aquarium_reset_feed_fish_check)
+    
+    More information: https://www.home-assistant.io/docs/automation/basics/
 
   - Scripts:
     -
     - Manually feed the fish and turn on the 'fish already fed check' (script.aquarium_feed_fish_manually)
 
-  - Shell Commands:
-    -
-    - Feed Fish (shell_command.ecogarden_feedfish)
+    More information: https://www.home-assistant.io/integrations/script/
 
   - Helpers:
     - 
@@ -34,13 +50,15 @@ The following features have been implemented:
     
   - Google Assistant / Google Home Integration:
     - 
-    The below steps only work if you have already set up a working connection between your HA environment and Google Assistant.   For more information, see https://www.home-assistant.io/integrations/google_assistant/
+    The below steps only work if you have already set up a working connection between your HA environment and Google Assistant.
     
     **Fish Feeding:**
     - Ensure that the script 'script.aquarium_feed_fish_manually' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
     - Once exposed, the script appears as a scene in the Google Assistant app
     - Feed the fish with the command: 'OK Google, Activate Fish Feeding'
-    
+
+    More information: https://www.home-assistant.io/integrations/google_assistant/
+
 ----
 ## Disclaimer
 
