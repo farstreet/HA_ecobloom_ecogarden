@@ -62,12 +62,19 @@ The following features have been implemented:
 
   - Extra's
     - 
-    To further enhance the experience of the Ecogarden, I'm also using the following tools, which are all integrated into HA as well.
+    To further enhance the experience of the Ecogarden, I'm also using the following tools, which are integrated into HA as well.
     
     - As the Ecogarden only has a led lamp above the plants but not in the aquarium itself, I've added an aquarium specific light solution myself.  To be able to automatically turn the aquarium lights on and off (based on presence, time of day, etc..), I am using a [Z-Wave](https://www.home-assistant.io/integrations/zwave_js/) Smart Switch.
 
- 
- 
+  - Next Steps
+    - 
+    Potential further improvements, possible in HA (but not implemented yet)
+    
+    - Warning (on smartphone, in back-office, via Voice Assistant, ...) when the water temperature goes above/below certain tresholds.
+    - Warning when fish are not fed yet after a certain time of the day.
+    - Warning when someone manually feeds the fish when they got food already.
+    - Warning when the aquarium light is on at night or when nobody is home.
+    - ...
 
 ----
 # Disclaimer
