@@ -6,5 +6,11 @@
     alias: 'Fish Feeding'
     sequence:
       - service: shell_command.ecogarden_feedfish
+      - service: input_boolean.turn_off
+        entity_id: input_boolean.aquarium_fish_fed
       - service: input_boolean.turn_on
         entity_id: input_boolean.aquarium_fish_fed
+        
+# There is no real need to first turn off the entity 'input_boolean.aquarium_fish_fed' before turning it on.   
+# The reason I'm doing this here is to ensure that the entity will have a status-update in order to be able to show the last time the fish got food in the back-office.
+
