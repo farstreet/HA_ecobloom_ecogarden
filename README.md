@@ -48,7 +48,7 @@ The following features have been implemented:
   
   - Lovelace Back-Office
     - 
-    - Button Card to feed the fish manually from the Back-office
+![Lovelace Card](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/lovelace%20card.png)
  
  
   - Google Assistant / Google Home Integration [:grey_question:](https://www.home-assistant.io/integrations/google_assistant/)
