@@ -14,12 +14,12 @@ I am using a combination of shell commands (to send commands to the Ecogarden, e
 
 The following features have been implemented:
 
-  - Shell Commands [:grey_question:](https://www.home-assistant.io/integrations/shell_command/)
+  - [Shell Commands](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/shell%20commands) [:grey_question:](https://www.home-assistant.io/integrations/shell_command/)
     -
     - Feed Fish (shell_command.ecogarden_feedfish)
 
 
-  - Sensors
+  - [Sensors](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/sensors)
     -     
     #### RESTful Sensors [:grey_question:](https://www.home-assistant.io/integrations/sensor.rest/)
     - Temperature of the water (sensor.ecogarden_water_temperature)
@@ -29,12 +29,12 @@ The following features have been implemented:
     - Sensor to show status fish feeding in a user-friendly way (sensor.template_aquarium_fish_fed)
  
  
-  - Automations [:grey_question:](https://www.home-assistant.io/docs/automation/basics/)
+  - [Automations](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/automations) [:grey_question:](https://www.home-assistant.io/docs/automation/basics/)
     -     
     - Feed the fish at 9am unless already fed manually earlier (automation.aquarium_feed_fish_at_9am)
     - Reset the 'fish already fed check' at midnight to allow automatic feeding the next day (automation.aquarium_reset_feed_fish_check)
 
-  - Scripts [:grey_question:](https://www.home-assistant.io/integrations/script/)
+  - [Scripts](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/scripts) [:grey_question:](https://www.home-assistant.io/integrations/script/)
     -
     - Manually feed the fish and turn on the 'fish already fed check' (script.aquarium_feed_fish_manually)
 
@@ -46,7 +46,7 @@ The following features have been implemented:
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
   
   
-  - Lovelace Back-Office
+  - [Lovelace Back-Office](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/lovelace)
     - 
 ![Lovelace Card](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/lovelace%20card.png)
  
