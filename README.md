@@ -15,7 +15,8 @@ The following features have been implemented:
   - Shell Commands [:grey_question:](https://www.home-assistant.io/integrations/shell_command/)
     -
     - Feed Fish (shell_command.ecogarden_feedfish)
-    
+
+
   - Sensors
     -     
     ### RESTful Sensors [:grey_question:](https://www.home-assistant.io/integrations/sensor.rest/)
@@ -24,7 +25,8 @@ The following features have been implemented:
     
      ### Template Sensors [:grey_question:](https://www.home-assistant.io/integrations/template/)
     - Sensor to show status fish feeding in a user-friendly way (sensor.template_aquarium_fish_fed)
-    
+ 
+ 
   - Automations [:grey_question:](https://www.home-assistant.io/docs/automation/basics/)
     -     
     - Feed the fish at 9am unless already fed manually earlier (automation.aquarium_feed_fish_at_9am)
@@ -34,16 +36,19 @@ The following features have been implemented:
     -
     - Manually feed the fish and turn on the 'fish already fed check' (script.aquarium_feed_fish_manually)
 
+
   - Helpers
     - 
     - Fish already fed check (input_boolean.aquarium_fish_fed)
 
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
-    
+  
+  
   - Lovelace Back-Office
     - 
     - Button Card to feed the fish manually from the Back-office
-    
+ 
+ 
   - Google Assistant / Google Home Integration [:grey_question:](https://www.home-assistant.io/integrations/google_assistant/)
     - 
     The below steps only work if you have already set up a working connection between your HA environment and Google Assistant.
