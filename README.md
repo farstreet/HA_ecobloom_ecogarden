@@ -73,6 +73,7 @@ The following features have been implemented:
     - Warning (on smartphone, in back-office, via Voice Assistant, ...) when the water temperature goes above/below certain tresholds.
     - Warning when fish are not fed yet after a certain time of the day.
     - Warning when someone manually feeds the fish when they got food already.
+    - Automatically turn on/off the aquarium light based on home presence, time of day, ...
     - Warning when the aquarium light is on at night or when nobody is home.
     - ...
 
