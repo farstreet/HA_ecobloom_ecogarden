@@ -1,11 +1,64 @@
-###########################################################################################
-# Manually feed the fish from the back-office
-###########################################################################################
-type: button
-tap_action:
-  action: call-service
-  service: script.aquarium_feed_fish_manually
-  service_data: {}
-  target: {}
-icon: mdi:shaker
-name: Feed Fish
+type: vertical-stack
+title: Ecobloom Ecogarden
+cards:
+  - type: horizontal-stack
+    cards:
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: call-service
+          service: script.aquarium_feed_fish_manually
+          service_data: {}
+          target: {}
+        icon: mdi:shaker
+        name: Manual Fish Feeding
+        show_state: true
+        icon_height: 30px
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: more-info
+        entity: sensor.template_aquarium_fish_fed
+        icon: ''
+        show_state: true
+        icon_height: 30px
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: toggle
+        icon: mdi:fishbowl
+        name: Aquarium Light
+        show_state: true
+        icon_height: 30px
+        entity: switch.kitchen_power_switch
+  - type: horizontal-stack
+    cards:
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: more-info
+        entity: sensor.ecogarden_temperature
+        name: Water Temperature
+        icon: mdi:coolant-temperature
+        show_state: true
+        icon_height: 30px
+        hold_action:
+          action: none
+      - show_name: true
+        show_icon: true
+        type: button
+        tap_action:
+          action: more-info
+        entity: sensor.ecogarden_light_sensor
+        name: Ambient Light Brightness
+        icon: mdi:sun-thermometer
+        icon_height: 30px
+        show_state: true
+        hold_action:
+          action: none
