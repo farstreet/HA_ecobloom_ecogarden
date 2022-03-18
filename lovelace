@@ -1,6 +1,3 @@
-![Lovelace Card](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/lovelace%20card.png)
-
-
 type: vertical-stack
 title: Ecobloom Ecogarden
 cards:
