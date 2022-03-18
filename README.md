@@ -6,7 +6,7 @@ The [EcoGarden™](https://ecobloom.se/ecogarden/) is Ecobloom’s first product
 
 ![Aquaponics](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/aquaponics.png)
 
-This Github describes the integration of the Ecobloom Ecogarden into [Home Assistant](https://homeassistant.io/) through a local API.
+This Github describes the integration of the Ecobloom Ecogarden into [Home Assistant](https://homeassistant.io/) (HA) through a local API.
 
 Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy. It can be accessed via a web-based user interface, via companion apps for Android and iOS, or using voice commands via a supported virtual assistant like Google Assistant and Amazon Alexa.  Click [here](https://demo.home-assistant.io/#/lovelace/0) for a demo.
 
@@ -21,11 +21,11 @@ The following features have been implemented:
 
   - Sensors
     -     
-    ### RESTful Sensors [:grey_question:](https://www.home-assistant.io/integrations/sensor.rest/)
+    #### RESTful Sensors [:grey_question:](https://www.home-assistant.io/integrations/sensor.rest/)
     - Temperature of the water (sensor.ecogarden_water_temperature)
     - Ambient light sensor (sensor.ecogarden_light_sensor)
     
-     ### Template Sensors [:grey_question:](https://www.home-assistant.io/integrations/template/)
+     #### Template Sensors [:grey_question:](https://www.home-assistant.io/integrations/template/)
     - Sensor to show status fish feeding in a user-friendly way (sensor.template_aquarium_fish_fed)
  
  
@@ -55,14 +55,22 @@ The following features have been implemented:
     - 
     The below steps only work if you have already set up a working connection between your HA environment and Google Assistant.
     
-    ### Fish Feeding
+    #### Fish Feeding
     - Ensure that the script 'script.aquarium_feed_fish_manually' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
     - Once exposed, the script appears as a scene in the Google Assistant app
     - Feed the fish with the command: 'OK Google, Activate Fish Feeding'
 
+  - Extra's
+    - 
+    To further enhance the experience of the Ecogarden, I'm also using the following tools, which are all integrated into HA as well.
+    
+    - As the Ecogarden only has a led lamp above the plants but not in the aquarium itself, I've added an aquarium specific light solution myself.  To be able to automatically turn the aquarium lights on and off (based on presence, time of day, etc..), I am using a [Z-Wave](https://www.home-assistant.io/integrations/zwave_js/) Smart Switch.
+
+ 
+ 
 
 ----
-## Disclaimer
+# Disclaimer
 
 This is not an official Home Assistant integration.   The information shared in this Github is a representation of how I integrated the Ecobloom Ecogarden into my own Home Assistant environment.   Don't simply copy/paste my examples into your personal HA instance as it will most likely not work "just like that".  
 
