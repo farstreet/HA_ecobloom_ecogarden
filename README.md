@@ -2,17 +2,15 @@
 
 ![Ecobloom Ecogarden](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/ecogarden.png)
 
-The EcoGarden™ is Ecobloom’s first product initially launched on Kickstarter in 2018. It utilizes an ancient growing technique known as aquaponics, which uses fish waste as a nutrient source for the plants, while the plants naturally filter the water which is recirculated back to the fish. It’s a natural and effective way of creating the ultimate self-sustaining and resource-efficient ecosystem where plants and fish live in symbiosis.
+The [EcoGarden™](https://ecobloom.se/ecogarden/) is Ecobloom’s first product initially launched on Kickstarter in 2018. It utilizes an ancient growing technique known as aquaponics, which uses fish waste as a nutrient source for the plants, while the plants naturally filter the water which is recirculated back to the fish. It’s a natural and effective way of creating the ultimate self-sustaining and resource-efficient ecosystem where plants and fish live in symbiosis.
 
 ![Aquaponics](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/aquaponics.png)
 
-More information on the Ecogarden by Ecobloom: https://ecobloom.se/ecogarden/
+This Github describes the integration of the Ecobloom Ecogarden into [Home Assistant](https://homeassistant.io/) through a local API.
 
-This Github describes the integration of the Ecobloom Ecogarden into Home Assistant through a local API.
+Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy. It can be accessed via a web-based user interface, via companion apps for Android and iOS, or using voice commands via a supported virtual assistant like Google Assistant and Amazon Alexa.
 
 I am using a combination of shell commands (to send commands to the Ecogarden, e.g. feed the fish) and RESTful sensors (to receive current values, e.g.  water temperature).   These are then used in a number of scripts and automations to allow automatic actions and voice commands through Google Home (other voice assistants can be used as well).  Current status of the aquarium and actions can also be triggered manually via the Lovelace back-office.   
-
-More information on Home Assistant: https://homeassistant.io
 
 The following features have been implemented:
 
