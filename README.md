@@ -4,6 +4,8 @@
 
 The EcoGarden™ is Ecobloom’s first product initially launched on Kickstarter in 2018. It utilizes an ancient growing technique known as aquaponics, which uses fish waste as a nutrient source for the plants, while the plants naturally filter the water which is recirculated back to the fish. It’s a natural and effective way of creating the ultimate self-sustaining and resource-efficient ecosystem where plants and fish live in symbiosis.
 
+![Aquaponics](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/aquaponics.png)
+
 More information on the Ecogarden by Ecobloom: https://ecobloom.se/ecogarden/
 
 This Github describes the integration of the Ecobloom Ecogarden into Home Assistant through a local API.
