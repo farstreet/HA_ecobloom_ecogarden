@@ -8,7 +8,7 @@ The [EcoGarden™](https://ecobloom.se/ecogarden/) is Ecobloom’s first product
 
 This Github describes the integration of the Ecobloom Ecogarden into [Home Assistant](https://homeassistant.io/) through a local API.
 
-Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy. It can be accessed via a web-based user interface, via companion apps for Android and iOS, or using voice commands via a supported virtual assistant like Google Assistant and Amazon Alexa.
+Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy. It can be accessed via a web-based user interface, via companion apps for Android and iOS, or using voice commands via a supported virtual assistant like Google Assistant and Amazon Alexa.  Click [here](https://demo.home-assistant.io/#/lovelace/0) for a demo.
 
 I am using a combination of shell commands (to send commands to the Ecogarden, e.g. feed the fish) and RESTful sensors (to receive current values, e.g.  water temperature).   These are then used in a number of scripts and automations to allow automatic actions and voice commands through Google Home (other voice assistants can be used as well).  Current status of the aquarium and actions can also be triggered manually via the Lovelace back-office.   
 
