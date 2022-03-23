@@ -57,12 +57,17 @@ The following features have been implemented:
     
     #### Fish Feeding [:movie_camera:](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/movies/GH_fish_feeding.mov)
     - Ensure that the script 'script.aquarium_feed_fish_manually' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
-    - Once exposed, the script appears as a scene in the Google Assistant app
+    - Once exposed, the script appears as a scene under 'Home Control' in the Google Assistant app
     - Feed the fish with the command: 'Hey Google, Activate Fish Feeding'
     - Alternatively you can also create a routine that reacts to voice command 'Hey Google, Feed The Fish' and which then automatically activates the 'Activate Fish Feeding' scene.
 
     ![Routine Example](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/routine_example.PNG)
 
+    #### Aquarium Temperature
+    - Ensure that the sensor 'sensor.ecogarden_temperature' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
+    - Once exposed, the sensor appears as a device under 'Home Control' in the Google Assistant app
+    - Rename the device to 'Aquarium' in the Google Assistant App
+    - Ask for the temperature using the command: 'Hey Google, what is the temperature of the aquarium?'
 
   - Extra's
     - 
