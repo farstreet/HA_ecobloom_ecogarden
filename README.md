@@ -55,7 +55,7 @@ The following features have been implemented:
     - 
     The below steps only work if you have already set up a working connection between your HA environment and Google Assistant.
     
-    #### Fish Feeding [:movie_camera:](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/images/GH_fish_feeding.mov)
+    #### Fish Feeding [:movie_camera:](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/movies/GH_fish_feeding.mov)
     - Ensure that the script 'script.aquarium_feed_fish_manually' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
     - Once exposed, the script appears as a scene in the Google Assistant app
     - Feed the fish with the command: 'Hey Google, Activate Fish Feeding'
