@@ -46,7 +46,7 @@ The following features have been implemented:
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
   
   
-  - [Lovelace Back-Office](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/lovelace)
+  - [HA Back-Office](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/lovelace)
     - 
 ![Lovelace Card](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/lovelace%20card.png)
  
