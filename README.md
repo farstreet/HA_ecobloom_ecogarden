@@ -69,7 +69,7 @@ The following features have been implemented:
     - Rename the device to 'Aquarium' in the Google Assistant App
     - Ask for the temperature using the command: 'Hey Google, what is the temperature of the aquarium?'
 
-    ![Aquarium Temperature](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/aquarium_temperature.png)
+    ![Aquarium Temperature](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/GH_aquarium_temperature.png)
 
 
   - Extra's
