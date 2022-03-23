@@ -61,7 +61,7 @@ The following features have been implemented:
     - Feed the fish with the command: 'Hey Google, Activate Fish Feeding'
     - Alternatively you can also create a routine that reacts to voice command 'Hey Google, Feed The Fish' and which then automatically activates the 'Activate Fish Feeding' scene.
 
-    ![Routine Example](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/routine_example.PNG)
+    ![Routine Example](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/routine_example.png)
 
     #### Aquarium Temperature
     - Ensure that the sensor 'sensor.ecogarden_temperature' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
@@ -69,7 +69,7 @@ The following features have been implemented:
     - Rename the device to 'Aquarium' in the Google Assistant App
     - Ask for the temperature using the command: 'Hey Google, what is the temperature of the aquarium?'
 
-    ![Aquarium Temperature](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/GH_aquarium_temperature.png)
+    ![Aquarium Temperature](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/aquarium_temperature.png)
 
 
   - Extra's
