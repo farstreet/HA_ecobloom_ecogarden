@@ -60,7 +60,7 @@ The following features have been implemented:
     - Once exposed, the script appears as a scene in the Google Assistant app
     - Feed the fish with the command: 'Hey Google, Activate Fish Feeding'
     - Alternatively you can also create a routine that reacts to voice command 'Hey Google, Feed The Fish' and which then automatically activates the 'Activate Fish Feeding' scene.
-![Routine Example](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/routine_example.PNG)
+
 
   - Extra's
     - 
