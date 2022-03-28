@@ -15,9 +15,7 @@
     state: 'off'
  
   action:
-  - service: shell_command.ecogarden_feedfish
-  - service: input_boolean.turn_on
-    entity_id: input_boolean.aquarium_fish_fed
+  - service: script.aquarium_feed_fish
 
 ################################################################################
 # automation.aquarium_reset_feed_fish_check
