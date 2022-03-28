@@ -10,13 +10,16 @@ This Github describes the integration of the Ecobloom Ecogarden into [Home Assis
 
 Home Assistant is a free and open-source software for home automation that is designed to be the central control system for smart home devices with focus on local control and privacy. It can be accessed via a web-based user interface, via companion apps for Android and iOS, or using voice commands via a supported virtual assistant like Google Assistant and Amazon Alexa.  Click [here](https://demo.home-assistant.io/#/lovelace/0) for a demo.
 
-I am using a combination of shell commands (to send commands to the Ecogarden, e.g. feed the fish) and RESTful sensors (to receive current values, e.g.  water temperature).   These are then used in a number of scripts and automations to allow automatic actions and voice commands through Google Home (other voice assistants can be used as well).  Current status of the aquarium and actions can also be triggered manually via the HA back-office.   
+I am using a combination of commands (to send commands to the Ecogarden, e.g. feed the fish) and sensors (to receive current values, e.g.  water temperature).   These are then used in a number of scripts and automations to allow automatic actions, perform checks and execute voice commands through Google Home (other voice assistants can be used as well).  Current status of the aquarium and actions can also be triggered manually via the HA back-office.   
 
-The following features have been implemented:
+This project is work-in-progress.  Ecobloom is still creating the endpoints that are necessary to be able to connect with the Ecogarden.  I am updating this repository as I receive new endpoints to test from them.   There is no versioning available for this project.
+
+The following features have already been implemented:
 
   - [Shell Commands](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/shell%20commands) [:grey_question:](https://www.home-assistant.io/integrations/shell_command/)
     -
-    - Feed Fish (shell_command.ecogarden_feedfish)
+    - Feed Fish (shell_command.ecogarden_feedfish) which instructs to Ecogarden to activate the built-in Fish Feeder and stores the server response in a temporary text-file which is used to create a sensor tha allows to determine whether the command was succesful or not
+    - Feed Fish Result Reset (shell_command.ecogarden_feedfish_result_reset) to reset a sensor that is used to check whether the above Fish Feeding instruction was succesfully received and executed by the Ecogarden
 
 
   - [Sensors](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/sensors)
@@ -27,6 +30,9 @@ The following features have been implemented:
     
      #### Template Sensors [:grey_question:](https://www.home-assistant.io/integrations/template/)
     - Sensor to show status fish feeding in a user-friendly way (sensor.template_aquarium_fish_fed)
+    
+     #### Command Line Sensors [:grey_question:](https://www.home-assistant.io/integrations/sensor.command_line/)
+    - Sensor to capture server response after fish feeding command (sensor.ecogarden_feedfish_result)
  
  
   - [Automations](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/automations) [:grey_question:](https://www.home-assistant.io/docs/automation/basics/)
@@ -36,7 +42,8 @@ The following features have been implemented:
 
   - [Scripts](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/scripts) [:grey_question:](https://www.home-assistant.io/integrations/script/)
     -
-    - Feed the fish (script.aquarium_feed_fish), which is used in the above automation and to manually trigger fish feeding via the back-office.  Script also activates the 'fish already fed check' (to avoid automatic feeding when fish already got fed manually) and checks whether the Ecogarden responded to the command, which in return allows to create notifications about potential issues.
+    - Feed the fish (script.aquarium_feed_fish), which is used in the above automation and to manually trigger fish feeding via the back-office.  Script also activates the 'fish already fed check' (to avoid automatic feeding when fish already got fed manually) and checks whether the Ecogarden responded to the command.   Bassed on the result of the response check, either one of the below scripts is executed:
+      - A script that 
 
 
   - Helpers
