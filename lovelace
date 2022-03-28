@@ -8,7 +8,7 @@ cards:
         type: button
         tap_action:
           action: call-service
-          service: script.aquarium_feed_fish_manually
+          service: script.aquarium_feed_fish
           service_data: {}
           target: {}
         icon: mdi:shaker
