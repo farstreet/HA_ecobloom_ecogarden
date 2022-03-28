@@ -36,3 +36,12 @@
           {% else %}
             mdi:thumb-down
           {% endif %}
+
+
+###############################################################################################################
+# sensor.ecogarden_feedfish_result
+###############################################################################################################
+  - platform: command_line
+    name: Ecogarden Feedfish Result
+    command: "cat feedfish_result.txt"
+
