@@ -43,7 +43,8 @@ The following features have already been implemented:
   - [Scripts](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/scripts) [:grey_question:](https://www.home-assistant.io/integrations/script/)
     -
     - Feed the fish (script.aquarium_feed_fish), which is used in the above automation and to manually trigger fish feeding via the back-office.  Script also activates the 'fish already fed check' (to avoid automatic feeding when fish already got fed manually) and checks whether the Ecogarden responded to the command.   Bassed on the result of the response check, either one of the below scripts is executed:
-      - A script that 
+      - 'Success' script that updates the Feed Fish Check (script.aquarium_feed_fish_success)
+      - 'Fail' script that sends out a notification to warn about the failed fish feeding attempt (script.aquarium_feed_fish_fail)
 
 
   - Helpers
