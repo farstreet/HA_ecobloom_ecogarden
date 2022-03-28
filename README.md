@@ -36,7 +36,7 @@ The following features have been implemented:
 
   - [Scripts](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/scripts) [:grey_question:](https://www.home-assistant.io/integrations/script/)
     -
-    - Manually feed the fish and turn on the 'fish already fed check' (script.aquarium_feed_fish_manually)
+    - Feed the fish (script.aquarium_feed_fish), which is used in the above automation and to manually trigger fish feeding via the back-office.  Script also activates the 'fish already fed check' (to avoid automatic feeding when fish already got fed manually) and checks whether the Ecogarden responded to the command, which in return allows to create notifications about potential issues.
 
 
   - Helpers
