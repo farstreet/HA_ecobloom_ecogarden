@@ -1,8 +1,8 @@
 ###############################################################################################################
-# script.aquarium_feed_fish_manually
+# script.aquarium_feed_fish
 ###############################################################################################################
 
-  aquarium_feed_fish_manually:  
+  aquarium_feed_fish:  
     alias: 'Fish Feeding'
     sequence:
       - service: shell_command.ecogarden_feedfish
