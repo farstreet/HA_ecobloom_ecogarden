@@ -20,6 +20,8 @@ The following features have already been implemented:
     -
     - Feed Fish (shell_command.ecogarden_feedfish) which instructs to Ecogarden to activate the built-in Fish Feeder and stores the server response in a temporary text-file which is used to create a sensor tha allows to determine whether the command was succesful or not
     - Feed Fish Result Reset (shell_command.ecogarden_feedfish_result_reset) to reset a sensor that is used to check whether the above Fish Feeding instruction was succesfully received and executed by the Ecogarden
+    - Set Plant Led Brightness (shell_command.ecogarden_set_plant_led_brightness) to manually set the brightness of the led above the plants, when not using the Ecogarden Power Save Mode
+    - Ecogarden Power Save Mode (shell_command.ecogarden_power_save_mode) which allows to turn the Ecogarden Power Save Mode on or off
 
 
   - [Sensors](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/sensors)
