@@ -1,8 +1,8 @@
 ###############################################################################################################
-# script.aquarium_feed_fish
+# script.ecogarden_feed_fish
 ###############################################################################################################
 
-  aquarium_feed_fish:
+  ecogarden_feed_fish:
     alias: 'Fish Feeding'
     sequence:
       - service: shell_command.ecogarden_feedfish
@@ -15,43 +15,43 @@
           seconds: 2
       - service: >
           {% if states('sensor.ecogarden_feedfish_result') == '200' %}
-            script.aquarium_feed_fish_success
+            script.ecogarden_feed_fish_success
           {% else %} 
-            script.aquarium_feed_fish_fail
+            script.ecogarden_feed_fish_fail
           {% endif %}
 
 
 ###############################################################################################################
-# script.aquarium_feed_fish_success
+# script.ecogarden_feed_fish_success
 ###############################################################################################################
 
-  aquarium_feed_fish_success:
+  ecogarden_feed_fish_success:
     alias: 'Fish Feeding Succesful'
     sequence:
       - service: input_boolean.turn_off
         data:
-          entity_id: input_boolean.aquarium_fish_fed
+          entity_id: input_boolean.ecogarden_fish_fed
       - service: input_boolean.turn_on
         data:
-          entity_id: input_boolean.aquarium_fish_fed
+          entity_id: input_boolean.ecogarden_fish_fed
       - service: shell_command.ecogarden_feedfish_result_reset
 
 
-# There is no real need to first turn off the entity 'input_boolean.aquarium_fish_fed' before turning it on.   
+# There is no real need to first turn off the entity 'input_boolean.ecogarden_fish_fed' before turning it on.   
 # The reason I'm doing this here is to ensure that the entity will have a status-update in order to be able to show the last time the fish got food in the back-office.
 
 
 ###############################################################################################################
-# script.aquarium_feed_fish_fail
+# script.ecogarden_feed_fish_fail
 ###############################################################################################################
 
-  aquarium_feed_fish_fail:
+  ecogarden_feed_fish_fail:
     alias: 'Fish Feeding Failed'
     sequence:
       - service: notify.mobile_app_iphone_jurgen
         data:
           title: "Fish Feeding Failed"
-          message: "Check whether aquarium is still online!"
+          message: "Check whether ecogarden is still online!"
       - service: shell_command.ecogarden_feedfish_result_reset
 
 
