@@ -32,6 +32,8 @@ The following features have already been implemented:
     
      #### Template Sensors [:grey_question:](https://www.home-assistant.io/integrations/template/)
     - Sensor to show status fish feeding in a user-friendly way (sensor.template_ecogarden_fish_fed)
+    - Sensor to use as argument for the Ecogarden Power Save Mode command (sensor.template_ecogarden_power_save_mode)
+    - Sensor to use as argument for the Set Plant Led Brightness command (sensor.template_ecogarden_plant_led_brightness)
     
      #### Command Line Sensors [:grey_question:](https://www.home-assistant.io/integrations/sensor.command_line/)
     - Sensor to capture server response after fish feeding command (sensor.ecogarden_feedfish_result)
