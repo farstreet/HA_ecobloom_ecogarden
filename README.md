@@ -67,7 +67,7 @@ The following features have already been implemented:
   
   - [HA Back-Office](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/lovelace)
     - 
-![Lovelace Card](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/lovelace%20card.png)
+![Lovelace Card](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/lovelace_card.png)
  
  
   - Google Assistant / Google Home Integration [:grey_question:](https://www.home-assistant.io/integrations/google_assistant/)
