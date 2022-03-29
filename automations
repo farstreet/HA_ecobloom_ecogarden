@@ -17,6 +17,7 @@
   action:
   - service: script.ecogarden_feed_fish
 
+
 ################################################################################
 # automation.ecogarden_reset_feed_fish_check
 ################################################################################
@@ -31,3 +32,32 @@
   action:
   - service: input_boolean.turn_off
     entity_id: input_boolean.ecogarden_fish_fed
+
+
+################################################################################
+# automation.ecogarden_plant_led_brightness
+################################################################################
+
+- alias: Ecogarden Plant Led Brightness
+  id: 'ecogarden_plant_led_brightness'
+  trigger:
+  - platform: state
+    entity_id: sensor.template_ecogarden_plant_led_brightness
+  condition:
+  - condition: template
+    value_template: "{{ states('sensor.template_ecogarden_plant_led_brightness') != '999' }}"
+  action:
+  - service: shell_command.ecogarden_set_plant_led_brightness
+
+
+################################################################################
+# automation.ecogarden_power_save_mode
+################################################################################
+
+- alias: Ecogarden Power Save Mode
+  id: 'ecogarden_power_save_mode'
+  trigger:
+  - platform: state
+    entity_id: sensor.template_ecogarden_power_save_mode
+  action:
+  - service: shell_command.ecogarden_power_save_mode
