@@ -39,6 +39,47 @@
 
 
 ###############################################################################################################
+# sensor.template_ecogarden_power_save_mode
+###############################################################################################################
+  - platform: template
+    sensors:
+      template_ecogarden_power_save_mode:
+        value_template: >
+          {% if is_state('input_select.ecogarden_plant_led_mode','Ecogarden Power Save Mode') %}
+            1
+          {% else %}
+            0
+          {% endif %}
+        friendly_name: "Power Save Mode"
+        icon_template: >
+          {% if is_state('input_select.ecogarden_plant_led_mode','Ecogarden Power Save Mode') %}
+            mdi:led-on
+          {% else %}
+            mdi:led-off
+          {% endif %}
+          
+          
+###############################################################################################################
+# sensor.template_ecogarden_plant_led_brightness
+###############################################################################################################
+  - platform: template
+    sensors:
+      template_ecogarden_plant_led_brightness:
+        value_template: >
+          {% if is_state('input_select.ecogarden_plant_led_mode','Local Power Save Mode') %}
+            {% if states('input_number.ecogarden_plant_led_brightness') | int > states('sensor.ecogarden_light_sensor') | int %}
+              {{ states('input_number.ecogarden_plant_led_brightness') | int - states('sensor.ecogarden_light_sensor') | int }}
+            {% else %}
+              0
+            {% endif %}
+          {% elif is_state('input_select.ecogarden_plant_led_mode','Manual') %}
+            {{ states('input_number.ecogarden_plant_led_brightness') }} 
+          {% else %}
+            999
+          {% endif %}
+
+
+###############################################################################################################
 # sensor.ecogarden_feedfish_result
 ###############################################################################################################
   - platform: command_line
