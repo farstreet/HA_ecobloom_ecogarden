@@ -43,6 +43,8 @@ The following features have already been implemented:
     -     
     - Feed the fish at 9am unless already fed manually earlier (automation.ecogarden_feed_fish_at_9am)
     - Reset the 'fish already fed check' at midnight to allow automatic feeding the next day (automation.ecogarden_reset_feed_fish_check)
+    - Turn Ecogarden Power Save Mode on or off (automation.ecogarden_power_save_mode)
+    - Change plant led brightness when not in Ecogarden Power Save Mode (automation.ecogarden_plant_led_brightness)
 
   - [Scripts](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/scripts) [:grey_question:](https://www.home-assistant.io/integrations/script/)
     -
@@ -54,6 +56,11 @@ The following features have already been implemented:
   - Helpers
     - 
     - Fish already fed check (input_boolean.ecogarden_fish_fed)
+    - Slider to manually set the brightness of the plant led (input_number.ecogarden_plant_led_brightness)
+    - Dropdown list (input_select.ecogarden_plant_led_mode) to choose between:
+      - Ecogarden Power Save Mode: Plant led is managed automatically by Ecogarden itself (brightness, automatically off after 10pm)
+      - Local Power Save Mode: Brightness of the plant led is managed locally by taking into account the value of the abovementioned slider and the ambient light brightness + plant led turned off when not home or asleep
+      - Manual: Brightness of the plant led is solely based on the value of the abovementioned slider + plant led turned off when not home or asleep
 
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
   
