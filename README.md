@@ -58,7 +58,7 @@ The following features have already been implemented:
     - Fish already fed check (input_boolean.ecogarden_fish_fed)
     - Slider to manually set the brightness of the plant led (input_number.ecogarden_plant_led_brightness)
     - Dropdown list (input_select.ecogarden_plant_led_mode) to choose between:
-      - Ecogarden Power Save Mode: Plant led is managed automatically by Ecogarden itself (brightness, automatically off after 10pm)
+      - Ecogarden Power Save Mode: Plant led is managed automatically by Ecogarden itself (brightness, automatically off after 10pm, ...)
       - Local Power Save Mode: Brightness of the plant led is managed locally by taking into account the value of the abovementioned slider and the ambient light brightness + plant led turned off when not home or asleep
       - Manual: Brightness of the plant led is solely based on the value of the abovementioned slider + plant led turned off when not home or asleep
 
@@ -96,6 +96,8 @@ The following features have already been implemented:
     To further enhance the experience of the Ecogarden, I'm also using the following tools, which are integrated into HA as well.
     
     - As the Ecogarden only has a led lamp above the plants but not in the aquarium itself, I've added an aquarium specific light solution myself.  To be able to automatically turn the aquarium lights on and off (based on presence, time of day, etc..), I am using a [Z-Wave](https://www.home-assistant.io/integrations/zwave_js/) Smart Switch.
+    - A [template binary sensor] https://www.home-assistant.io/integrations/template/ that indicates whether someone is at home (on/off).
+    - A [template binary sensor] https://www.home-assistant.io/integrations/template/ that indicates whether someone is in bed (on/off). 
 
   - Next Steps
     - 
