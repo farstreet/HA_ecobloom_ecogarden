@@ -1,21 +1,29 @@
   #########################################################################################################
   # shell_command.ecogarden_feedfish
-  #########################################################################################################
-  
+  #########################################################################################################  
   ecogarden_feedfish: "wget --server-response --timeout 1 http://LOCAL_IP_OF_YOUR_ECOGARDEN/hooks/feed_now 2>&1 | awk '/^  HTTP/{print $2}' > feedfish_result.txt"
   
   # Above command connects to the Ecogarden and calls the webhook 'feed_now'.  The server response is filtered out of the overall response message and stored in a temporary text file (feedfish_result.txt) which is used to create a sensor to check the server response. 
 
+
   #########################################################################################################
   # shell_command.ecogarden_feedfish_result_reset
   #########################################################################################################
-
   ecogarden_feedfish_result_reset: "echo '999' > feedfish_result.txt"
   
   # Above command overwrites the current content of feedfish_result.txt to ensure that previous results are not used to evaluate the server response for the fish feeding command.
-  
-  
-  
+
+
+  #########################################################################################################
+  # shell_command.ecogarden_set_plant_led_brightness
+  #########################################################################################################  
+  ecogarden_set_plant_led_brightness: "curl http://LOCAL_IP_OF_YOUR_ECOGARDEN/hooks/set_led_brightness?value={{ states('sensor.template_ecogarden_plant_led_brightness') | float / 100 }}"
+
+
+  #########################################################################################################
+  # shell_command.ecogarden_power_save_mode
+  ######################################################################################################### 
+  ecogarden_power_save_mode: "curl http://LOCAL_IP_OF_YOUR_ECOGARDEN/hooks/set_automatic_led_brightness?value={{ states('sensor.template_ecogarden_power_save_mode') }}"
   
   
   
