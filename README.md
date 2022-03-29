@@ -90,6 +90,13 @@ The following features have already been implemented:
 
     ![Aquarium Temperature](https://raw.githubusercontent.com/farstreet/HA_ecobloom_ecogarden/main/images/aquarium_temperature.png)
 
+    #### Plant Led
+    - Ensure that the sensor 'light.template_ecogarden_plant_led' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
+    - Once exposed, the sensor appears as a device under 'Home Control' in the Google Assistant app
+    - Rename the device to 'Plant Led' in the Google Assistant App
+    - Turn on/off the Pland Led by using the command: 'Hey Google, turn on/off the Plant Led'
+    - Brightness can be changed with 'Hey Google, dim the Plant Led' or 'Hey Google, set the Plant Led to (e.g.) 50%'
+    - Note that this will only work when the operation mode is set to 'Local Power Save Mode' or 'Manual'
 
   - Extra's
     - 
