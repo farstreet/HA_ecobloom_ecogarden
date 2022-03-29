@@ -29,7 +29,7 @@ The following features have already been implemented:
     - Ambient light sensor (sensor.ecogarden_light_sensor)
     
      #### Template Sensors [:grey_question:](https://www.home-assistant.io/integrations/template/)
-    - Sensor to show status fish feeding in a user-friendly way (sensor.template_aquarium_fish_fed)
+    - Sensor to show status fish feeding in a user-friendly way (sensor.template_ecogarden_fish_fed)
     
      #### Command Line Sensors [:grey_question:](https://www.home-assistant.io/integrations/sensor.command_line/)
     - Sensor to capture server response after fish feeding command (sensor.ecogarden_feedfish_result)
@@ -37,19 +37,19 @@ The following features have already been implemented:
  
   - [Automations](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/automations) [:grey_question:](https://www.home-assistant.io/docs/automation/basics/)
     -     
-    - Feed the fish at 9am unless already fed manually earlier (automation.aquarium_feed_fish_at_9am)
-    - Reset the 'fish already fed check' at midnight to allow automatic feeding the next day (automation.aquarium_reset_feed_fish_check)
+    - Feed the fish at 9am unless already fed manually earlier (automation.ecogarden_feed_fish_at_9am)
+    - Reset the 'fish already fed check' at midnight to allow automatic feeding the next day (automation.ecogarden_reset_feed_fish_check)
 
   - [Scripts](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/scripts) [:grey_question:](https://www.home-assistant.io/integrations/script/)
     -
-    - Feed the fish (script.aquarium_feed_fish), which is used in the above automation and to manually trigger fish feeding via the back-office.  Script also activates the 'fish already fed check' (to avoid automatic feeding when fish already got fed manually) and checks whether the Ecogarden responded to the command.   Bassed on the result of the response check, either one of the below scripts is executed:
-      - 'Success' script that updates the Feed Fish Check (script.aquarium_feed_fish_success)
-      - 'Fail' script that sends out a notification to warn about the failed fish feeding attempt (script.aquarium_feed_fish_fail)
+    - Feed the fish (script.ecogarden_feed_fish), which is used in the above automation and to manually trigger fish feeding via the back-office.  Script also activates the 'fish already fed check' (to avoid automatic feeding when fish already got fed manually) and checks whether the Ecogarden responded to the command.   Bassed on the result of the response check, either one of the below scripts is executed:
+      - 'Success' script that updates the Feed Fish Check (script.ecogarden_feed_fish_success)
+      - 'Fail' script that sends out a notification to warn about the failed fish feeding attempt (script.ecogarden_feed_fish_fail)
 
 
   - Helpers
     - 
-    - Fish already fed check (input_boolean.aquarium_fish_fed)
+    - Fish already fed check (input_boolean.ecogarden_fish_fed)
 
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
   
@@ -64,7 +64,7 @@ The following features have already been implemented:
     The below steps only work if you have already set up a working connection between your HA environment and Google Assistant.
     
     #### Fish Feeding [:movie_camera:](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/movies/GH_fish_feeding.mov)
-    - Ensure that the script 'script.aquarium_feed_fish_manually' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
+    - Ensure that the script 'script.ecogarden_feed_fish' is exposed within the Google Assistant settings of your HA environment (Configuration > Home Assistant Cloud > Google Assistant > Manage Entities)
     - Once exposed, the script appears as a scene under 'Home Control' in the Google Assistant app
     - Feed the fish with the command: 'Hey Google, Activate Fish Feeding'
     - Alternatively you can also create a routine that reacts to voice command 'Hey Google, Feed The Fish' and which then automatically activates the 'Activate Fish Feeding' scene.
