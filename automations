@@ -1,9 +1,9 @@
 ################################################################################
-# automation.aquarium_feed_fish_at_9am
+# automation.ecogarden_feed_fish_at_9am
 ################################################################################
 
-- alias: Aquarium Feed Fish At 9am
-  id: 'aquarium_feed_fish_at_9am'
+- alias: Ecogarden Feed Fish At 9am
+  id: 'ecogarden_feed_fish_at_9am'
   
   trigger:
   - platform: time
@@ -11,18 +11,18 @@
 
   condition:
   - condition: state
-    entity_id: input_boolean.aquarium_fish_fed
+    entity_id: input_boolean.ecogarden_fish_fed
     state: 'off'
  
   action:
-  - service: script.aquarium_feed_fish
+  - service: script.ecogarden_feed_fish
 
 ################################################################################
-# automation.aquarium_reset_feed_fish_check
+# automation.ecogarden_reset_feed_fish_check
 ################################################################################
 
-- alias: Aquarium Reset Feed Fish Check
-  id: 'aquarium_reset_feed_fish_check'
+- alias: Ecogarden Reset Feed Fish Check
+  id: 'ecogarden_reset_feed_fish_check'
   
   trigger:
   - platform: time
@@ -30,4 +30,4 @@
     
   action:
   - service: input_boolean.turn_off
-    entity_id: input_boolean.aquarium_fish_fed
+    entity_id: input_boolean.ecogarden_fish_fed
