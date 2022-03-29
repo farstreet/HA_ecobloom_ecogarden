@@ -8,7 +8,7 @@ cards:
         type: button
         tap_action:
           action: call-service
-          service: script.aquarium_feed_fish
+          service: script.ecogarden_feed_fish
           service_data: {}
           target: {}
         icon: mdi:shaker
@@ -20,7 +20,7 @@ cards:
         type: button
         tap_action:
           action: more-info
-        entity: sensor.template_aquarium_fish_fed
+        entity: sensor.template_ecogarden_fish_fed
         icon: ''
         show_state: true
         icon_height: 30px
@@ -62,3 +62,23 @@ cards:
         show_state: true
         hold_action:
           action: none
+  - type: horizontal-stack
+    cards:
+      - show_name: true
+        show_icon: true
+        type: button
+        entity: input_select.ecogarden_plant_led_mode
+        show_state: true
+        icon: mdi:playlist-check
+        name: Plant Led Mode
+        icon_height: 30px
+      - type: conditional
+        conditions:
+          - entity: input_select.ecogarden_plant_led_mode
+            state_not: Ecogarden Power Save Mode
+        card:
+          type: entities
+          entities:
+            - entity: light.template_ecogarden_plant_led
+            - entity: input_number.ecogarden_plant_led_brightness
+              name: Brightness
