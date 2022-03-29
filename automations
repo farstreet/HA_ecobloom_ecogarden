@@ -61,3 +61,49 @@
     entity_id: sensor.template_ecogarden_power_save_mode
   action:
   - service: shell_command.ecogarden_power_save_mode
+  
+
+
+################################################################################
+# automation.ecogarden_lights_off
+################################################################################
+  
+  - alias: Ecogarden Lights Off
+  id: 'ecogarden_lights_off'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.template_someone_in_bed
+    to: "on"
+  - platform: state
+    entity_id: binary_sensor.template_someone_home
+    to: "off"
+  action:
+  - service: switch.turn_off
+    entity_id: switch.aquarium_power_switch
+  - service: input_number.set_value
+    data:
+      entity_id: input_number.ecogarden_plant_led_brightness
+      value: 0
+
+
+################################################################################
+# automation.ecogarden_lights_on
+################################################################################
+
+- alias: Ecogarden Lights On
+  id: 'ecogarden_lights_on'
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.template_someone_home
+    to: "on"
+  - platform: state
+    entity_id: binary_sensor.template_someone_in_bed
+    to: "off"
+  condition:
+  action:
+  - service: switch.turn_on
+    entity_id: switch.aquarium_power_switch
+  - service: input_number.set_value
+    data:
+      entity_id: input_number.ecogarden_plant_led_brightness
+      value: 80
