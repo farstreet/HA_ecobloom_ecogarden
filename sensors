@@ -20,18 +20,18 @@
 
 
 ###############################################################################################################
-# sensor.template_aquarium_fish_fed
+# sensor.template_ecogarden_fish_fed
 ###############################################################################################################
   - platform: template
     sensors:
-      template_aquarium_fish_fed:
+      template_ecogarden_fish_fed:
         value_template: >
-          {% if is_state('input_boolean.aquarium_fish_fed','on') %}
-            {{ as_timestamp(states.input_boolean.aquarium_fish_fed.last_changed) | timestamp_custom('%H:%M') }}
+          {% if is_state('input_boolean.ecogarden_fish_fed','on') %}
+            {{ as_timestamp(states.input_boolean.ecogarden_fish_fed.last_changed) | timestamp_custom('%H:%M') }}
           {% endif %}
         friendly_name: "Fish Got Food?"
         icon_template: >
-          {% if is_state('input_boolean.aquarium_fish_fed','on') %}
+          {% if is_state('input_boolean.ecogarden_fish_fed','on') %}
             mdi:thumb-up
           {% else %}
             mdi:thumb-down
