@@ -1,0 +1,64 @@
+###############################################################################################################
+# light.template_aquarium
+###############################################################################################################
+  - platform: template
+    lights:
+      template_aquarium:
+        friendly_name: "Aquarium Light"
+        value_template: "{{ states('switch.kitchen_power_switch') }}"
+        icon_template: >-
+          {% if is_state('switch.kitchen_power_switch', 'on') %}
+            mdi:fishbowl
+          {% else %}
+            mdi:fishbowl
+          {% endif %}
+        turn_on:
+          service: switch.turn_on
+          data:
+            entity_id: switch.kitchen_power_switch
+        turn_off:
+          service: switch.turn_off
+          data:
+            entity_id: switch.kitchen_power_switch
+
+
+###############################################################################################################
+# light.template_ecogarden_plant_led
+###############################################################################################################
+  - platform: template
+    lights:
+      template_ecogarden_plant_led:
+        friendly_name: "Plant Led"
+        value_template: >
+          {% if states('input_number.ecogarden_plant_led_brightness') | int > 0  %}
+            on
+          {% else %}
+            off
+          {% endif %}
+        icon_template: >-
+          {% if states('input_number.ecogarden_plant_led_brightness') | int > 0  %}
+            mdi:led-on
+          {% else %}
+            mdi:led-off
+          {% endif %}
+        turn_on:
+          service: input_number.set_value
+          target:
+            entity_id: input_number.ecogarden_plant_led_brightness
+          data:
+            value: 80
+        turn_off:
+          service: input_number.set_value
+          target:
+            entity_id: input_number.ecogarden_plant_led_brightness
+          data:
+            value: 0
+        level_template: "{{ ( states('input_number.ecogarden_plant_led_brightness') | float / 100 * 255 ) | int }}"
+        set_level:
+          service: input_number.set_value
+          target:
+            entity_id: input_number.ecogarden_plant_led_brightness
+          data:
+            value: "{{ (brightness / 255 * 100) | int }}"
+
+
