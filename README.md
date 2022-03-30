@@ -46,6 +46,7 @@ The following features have already been implemented:
     - Turn Ecogarden Power Save Mode on or off (automation.ecogarden_power_save_mode)
     - Change plant led brightness when not in Ecogarden Power Save Mode (automation.ecogarden_plant_led_brightness)
 
+
   - [Scripts](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/scripts) [:grey_question:](https://www.home-assistant.io/integrations/script/)
     -
     - Feed the fish (script.ecogarden_feed_fish), which is used in the above automation and to manually trigger fish feeding via the back-office.  Script also activates the 'fish already fed check' (to avoid automatic feeding when fish already got fed manually) and checks whether the Ecogarden responded to the command.   Bassed on the result of the response check, either one of the below scripts is executed:
@@ -63,7 +64,14 @@ The following features have already been implemented:
       - Manual: Brightness of the plant led is solely based on the value of the abovementioned slider + plant led turned off when not home or asleep
 
     Helpers are created in the HA back-office (Configuration > Automations & Scenes > Helpers)
-  
+
+
+  - [Template Lights](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/template_lights) [:grey_question:](https://www.home-assistant.io/integrations/light.template/)
+    - 
+    - Aquarium Light (light.template_aquarium) which allows to turn on/off the extra light that I put in the aquarium itself to be able to see the fish better (see "Extra's" below)
+    - Plant Led (light.template_ecogarden_plant_led) which allows to turn on/off the led above the plants and to change the brightness
+
+    I am using template lights as these are recognized 'automatically' as lights by Google Home when exposed.
   
   - [HA Back-Office](https://github.com/farstreet/HA_ecobloom_ecogarden/blob/main/lovelace)
     - 
